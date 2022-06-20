@@ -1,0 +1,30 @@
+/* Header */
+
+.header {
+    width: 100vw;
+    background: #202329;
+    padding: 0 1.5%;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    width: 15%;
+    justify-content: space-around;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    background: #202329;
+    padding: 0 1.5%;
+    height: 6vh;
+    align-items: center;
+}
