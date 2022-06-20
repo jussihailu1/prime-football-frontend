@@ -1,6 +1,7 @@
 import { Post, Timeline } from "./models";
 
-const baseURL = "http://85.10.139.127:9080"
+//const baseURL = "http://85.10.139.127:9080"
+const baseURL = "https://blue-owls-play-85-10-139-127.loca.lt"
 
 const URLs = {
     posts: {
