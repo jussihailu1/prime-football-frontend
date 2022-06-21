@@ -1,7 +1,9 @@
 import { Post, Timeline } from "./models";
 
 //const baseURL = "http://85.10.139.127:9080"
-const baseURL = "https://blue-owls-play-85-10-139-127.loca.lt"
+const baseURL = "https://six-hornets-make-85-10-139-127.loca.lt"
+// const baseURL = "http://localhost:8080"
+
 
 const URLs = {
     posts: {
@@ -14,7 +16,7 @@ const URLs = {
 }
 
 const headers = {
-    'Authorization': localStorage.getItem('token')!!,
+    // "Authorization": localStorage.getItem('token')!!,
     "Content-Type": "application/json"
 }
 
@@ -37,6 +39,7 @@ export function getLatestTimeline(userId: string): Promise<Timeline> {
 }
 
 export function getPostsByUserId(userId: string): Promise<Post[]> {
+    console.log('get posts by user')
     return new Promise(async (resolve, reject) => {
         fetch(URLs.posts.user + userId, {
             method: "GET",
@@ -46,6 +49,7 @@ export function getPostsByUserId(userId: string): Promise<Post[]> {
 }
 
 export function storePost(post: Post): Promise<any> {
+    console.log('store post')
     return new Promise(async (resolve, reject) => {
         fetch(URLs.posts.create, {
             method: "POST",
@@ -56,6 +60,7 @@ export function storePost(post: Post): Promise<any> {
 }
 
 export function deletePost(postId: string): Promise<any> {
+    console.log('delete post')
     return new Promise(async (resolve, reject) => {
         fetch(URLs.posts.delete + postId, {
             method: "DELETE",
