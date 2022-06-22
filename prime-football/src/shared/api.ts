@@ -16,7 +16,7 @@ const URLs = {
 }
 
 const headers = {
-    // "Authorization": localStorage.getItem('token')!!,
+    "Authorization": localStorage.getItem('token')!!,
     "Content-Type": "application/json"
 }
 
