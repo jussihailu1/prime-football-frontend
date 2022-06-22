@@ -1,7 +1,7 @@
 import { Post, Timeline } from "./models";
 
-//const baseURL = "http://85.10.139.127:9080"
-const baseURL = "https://six-hornets-make-85-10-139-127.loca.lt"
+// const baseURL = "http://85.10.139.127:9080"
+const baseURL = "https://clean-tigers-nail-85-10-139-127.loca.lt"
 // const baseURL = "http://localhost:8080"
 
 
