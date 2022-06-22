@@ -39,7 +39,6 @@ export function getLatestTimeline(userId: string): Promise<Timeline> {
 }
 
 export function getPostsByUserId(userId: string): Promise<Post[]> {
-    console.log('get posts by user')
     return new Promise(async (resolve, reject) => {
         fetch(URLs.posts.user + userId, {
             method: "GET",
@@ -49,7 +48,6 @@ export function getPostsByUserId(userId: string): Promise<Post[]> {
 }
 
 export function storePost(post: Post): Promise<any> {
-    console.log('store post')
     return new Promise(async (resolve, reject) => {
         fetch(URLs.posts.create, {
             method: "POST",
@@ -60,7 +58,6 @@ export function storePost(post: Post): Promise<any> {
 }
 
 export function deletePost(postId: string): Promise<any> {
-    console.log('delete post')
     return new Promise(async (resolve, reject) => {
         fetch(URLs.posts.delete + postId, {
             method: "DELETE",
@@ -71,15 +68,14 @@ export function deletePost(postId: string): Promise<any> {
 
 export function authenticate(): Promise<any> {
     const body = {
-        email: "test123@gmail.com",
-        password: "test123",
-        returnSecureToken: true
+        "email": "test123@gmail.com",
+        "password": "test123",
+        "returnSecureToken": true
     }
 
     return new Promise(async (resolve, reject) => {
         fetch(URLs.authentication, {
             method: 'POST',
-            headers: headers,
             body: JSON.stringify(body)
         }).then((value) => { value.json().then((response) => resolve(response)) });
     })
